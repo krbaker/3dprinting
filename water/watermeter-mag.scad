@@ -33,10 +33,10 @@ union(){
           difference(){
             cube([5,90,2], center = true);
             //holes in mount
-            translate([0,8.89/2,-1]){
+            translate([0,7.62/2,-1]){
               cylinder(r=1.75,h=2);
             }
-            translate([0,-8.89/2,-1]){
+            translate([0,-7.62/2,-1]){
               cylinder(r=1.75,h=2);
             }
          }
@@ -45,10 +45,10 @@ union(){
            difference(){
              cube([5,60,2],center= true);
              //holes in mount
-             translate([0,8.89/2,-1]){
+             translate([0,7.62/2,-1]){
                cylinder(r=1.75,h=2);
              }
-             translate([0,-8.89/2,-1]){
+             translate([0,-7.62/2,-1]){
                cylinder(r=1.75,h=2);
              }
            }
