@@ -1,0 +1,47 @@
+can_height=105;
+can_diameter=57.50;
+slope=5;
+thickness=3;
+depth=240;
+height=100+can_diameter;
+ramp_height=depth*tan(slope);
+can_tolerance=1;
+$fn=60;
+difference(){
+ cube([depth,can_height,thickness]);
+  translate([thickness*2,thickness*2,.2]){
+    cube([depth/2-(3*thickness),can_height-(4*thickness),thickness*3]);
+  }
+  translate([thickness+depth/2,thickness*2,.2]){
+    cube([depth/2-(3*thickness),can_height-(4*thickness),thickness*3]);
+  }
+  translate([5,5,-.01]){
+    for ( i = [0 : 23] ){
+      for ( j = [0 : 9] ){
+        translate([i*10,j*10.5,0]){
+          cylinder(d = 7, h = .22);
+        }
+      }
+    }
+  }
+}
+translate([thickness,0,thickness/2]){
+  rotate([90,0,0]){
+    cylinder(d=thickness,h=thickness);
+  }
+}
+translate([depth-thickness,0,thickness/2]){
+  rotate([90,0,0]){
+    cylinder(d=thickness,h=thickness);
+  }
+}
+translate([depth-thickness,can_height+thickness,thickness/2]){
+  rotate([90,0,0]){
+    cylinder(d=thickness,h=thickness);
+  }
+}
+translate([thickness,can_height+thickness,thickness/2]){
+  rotate([90,0,0]){
+    cylinder(d=thickness,h=thickness);
+  }
+}

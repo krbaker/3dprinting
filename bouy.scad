@@ -1,0 +1,51 @@
+height=16;
+use<Write.scad>;
+difference(){
+cylinder(r=70/2,h=4);
+cylinder(r=20/2,h=4);
+translate([0,0,4]){
+translate([0,20,0]){
+  write("N",h=height,t=5,center=true);
+}
+rotate([0,0,-30]){
+  translate([0,20,0]){
+    write("-",h=height,t=5,center=true);
+  }
+}
+rotate([0,0,-60]){
+  translate([0,20,0]){
+    write("9",h=height,t=5,center=true);
+  }
+}
+rotate([0,0,-95]){
+  translate([0,20,0]){
+    write("8",h=height,t=5,center=true);
+  }
+}
+rotate([0,0,-130]){
+  translate([0,20,0]){
+    write("7",h=height,t=5,center=true);
+  }
+}
+rotate([0,0,-150]){
+  translate([0,20,0]){
+    write("1",h=height,t=5,center=true);
+  }
+}
+rotate([0,0,-185]){
+  translate([0,20,0]){
+    write("3",h=height,t=5,center=true);
+  }
+}
+rotate([0,0,-210]){
+  translate([0,20,0]){
+    write("-",h=height,t=5,center=true);
+  }
+}
+rotate([0,0,-235]){
+  translate([0,20,0]){
+    write("7",h=height,t=5,center=true);
+  }
+}
+}
+}
